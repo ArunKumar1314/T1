@@ -8,7 +8,7 @@ import GenericList from "../shared/component/GenericList";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import GenericDropDown from "../shared/component/GenericDropDown";
 import ModalAlert from "../shared/component/ModalAlert";
-const LabourGangAllocation=()=>{
+const LabourGangAllocation=({navigation}:{navigation:any})=>{
     const [isModalVisible, setModalVisible] = useState(false);
     const items = [
         {

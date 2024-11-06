@@ -11,7 +11,7 @@ import GenericDropDown from "../shared/component/GenericDropDown";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import GenericList from "../shared/component/GenericList";
 import ModalAlert from "../shared/component/ModalAlert";
-const GangUsageForMiscellianeous=()=>{
+const GangUsageForMiscellianeous=({navigation}:{navigation:any})=>{
     const [isModalVisible, setModalVisible] = useState(false);
     const items = [
         {

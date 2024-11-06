@@ -8,7 +8,7 @@ import GenericCalenderField from "../shared/component/GenericCalenderField";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { GenericInputFieldStyles } from "../styles/styles";
 import GenericDropDown from "../shared/component/GenericDropDown";
-const GangUsageForMiscellianeous=()=>{
+const GangUsageForMiscellianeous=({navigation}:{navigation:any})=>{
     return(
         // <CustomLinearGradient>
         <ScrollView>
