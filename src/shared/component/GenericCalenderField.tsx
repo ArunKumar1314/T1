@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { StyleProp, TouchableOpacity, View, ViewStyle } from "react-native";
+import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 import {
   GenericCalenderFieldStyles,
   GenericInputFieldStyles,
-  GenericCalendarcontainerStyles
+  GenericCalendarcontainerStyles,
+  GenericLabelStyles
 } from "../../styles/styles";
 import { TextInput } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -44,11 +45,14 @@ export default function GenericCalenderField({
 
   return (
     <View style={[GenericCalenderFieldStyles.conatiner]}>
+       <Text style={{color:'#999999',marginLeft:10,marginBottom:10,fontSize:17,fontFamily:'serif'}}>{label}</Text>
+      
       <View style={GenericCalendarcontainerStyles.container}>
+     
       <TextInput
         placeholder={label}
         value={selectedDate}
-        style={[GenericInputFieldStyles.buttonContainer, buttonContainerStyles]}
+        style={[GenericCalendarcontainerStyles.buttonContainer, buttonContainerStyles]}
         onFocus={openCalenderHandler}
         editable={false}
       />

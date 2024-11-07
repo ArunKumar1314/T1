@@ -48,6 +48,9 @@ export default function GenericDropDown({
     if (selectedOption) {
       setSelected(selectedOption.title);
     }
+    else{
+      setSelected("No such Field");
+    }
     closeMenuHandler();
   }
 
@@ -63,7 +66,7 @@ export default function GenericDropDown({
   return (
     <View style={[GenericDropDownStyles.container, containerStyles]}>
       <View style={GenericDropDownStyles.labelContainer}>
-        <Text style={[ GenericLabelDropDownStyles.container]}>{label}</Text>
+        <Text style={{marginLeft:10,color:'#999999',fontFamily:'serif',fontSize:17}}>{label}</Text>
       </View>
       <Menu
         visible={visible}

@@ -6,23 +6,37 @@ import GenericCheckBox from "../shared/component/GenericCheckBox";
 import CustomLinearGradient from "../shared/component/CustomLinearGradient";
 import GenericCalenderField from "../shared/component/GenericCalenderField";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { GenericInputFieldStyles } from "../styles/styles";
+import { GenericInputFieldStyles, GenericMenuStyles } from "../styles/styles";
 import GenericDropDown from "../shared/component/GenericDropDown";
+import Header from "./Header";
+import MenuButton from "./menuButton";
+import GenericDropDown1 from "../shared/component/GenericDropDown1";
 const GangUsageForMiscellianeous=({navigation}:{navigation:any})=>{
     return(
+        
         // <CustomLinearGradient>
         <ScrollView>
-        <View >
-            <Text style={GenericInputFieldStyles.titleStyle}>Gang Usage For Miscellaneous</Text>
+            {/* <View style={GenericMenuStyles.container}>
+            <MenuButton />
+            </View>
+             */}
+        <View>
+           <View style={{flexDirection:'row',marginTop:10,}}>
+           <MenuButton />
+           
+           <Text style={GenericInputFieldStyles.titleStyle}>Gang Usage For Miscellaneous</Text>
+            <Text style={{marginBottom:10}}>h</Text>
+           </View>
         
-              <GenericDropDown
+              <GenericDropDown1
                     label="Activity"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
                     />
-              <GenericDropDown
+              <GenericDropDown1
                     label="Labour Gang"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
                     />
+
              <GenericInputField
             label="Date"
             placeholder="Date"

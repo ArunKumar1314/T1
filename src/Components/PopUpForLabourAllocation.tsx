@@ -1,17 +1,16 @@
 import {Modal, ScrollView, StyleSheet, Text, View} from 'react-native';
-import GenericDropDown from './GenericDropDown';
-import GenericCalenderField from './GenericCalenderField';
-import GenericInputField from './GenericInputField';
-import GenericButton from './GenericButton';
-import { GenericButtonStyles } from '../../styles/styles';
-import GenericDropDown1 from './GenericDropDown1';
+import GenericDropDown from '../shared/component/GenericDropDown';
+import GenericCalenderField from '../shared/component/GenericCalenderField';
+import GenericInputField from '../shared/component/GenericInputField';
+import GenericButton from '../shared/component/GenericButton';
+import GenericDropDown1 from '../shared/component/GenericDropDown1';
 
 type Props = {
   visible: boolean;
   setValue: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function ModalAlert({visible, setValue}: Props) {
+export default function PopUpForLabourAllocation({visible, setValue}: Props) {
   function handleCloseModal() {
     setValue(false);
   }
@@ -26,25 +25,25 @@ export default function ModalAlert({visible, setValue}: Props) {
       <View style={[styles.overlay]}>
         <View style={[styles.modalView]}>
           <View style={styles.titleContainer}>
-            <Text style={styles.titleStyles}>Labour Gang Usage Details</Text>
+            <Text style={styles.titleStyles}>Labour Allocation</Text>
           </View>
           <ScrollView>
+          <GenericDropDown1
+                    label="Gang Number"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
           <GenericDropDown1
                     label="Activity"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
                     />
-            <GenericCalenderField
-              label={'Start Time'}
-              placeholder={'Start Time'}
-            />
-            <GenericCalenderField label={'End Time'} placeholder={'End Time'} />
+            <GenericDropDown1
+                    label="Shed"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
             <GenericInputField
               label={'No Of Bags'}
               placeholder={'No Of Bags'}
             />
-            <GenericDropDown1 Options={[]} label={'Labour Gang'} />
-            <GenericInputField label={'Lead'} placeholder={'Lead'} />
-            <GenericDropDown1 Options={[]} label={'Stack Name'} />
             <View style={styles.buttonContainer}>
              
               <GenericButton

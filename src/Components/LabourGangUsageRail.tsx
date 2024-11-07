@@ -12,8 +12,11 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import GenericList from "../shared/component/GenericList";
 import ModalAlert from "../shared/component/ModalAlert";
 import MenuButton from "./menuButton";
+import { KeyboardAvoidingView } from "react-native";
+import { Platform } from "react-native";
+import GenericDropDown1 from "../shared/component/GenericDropDown1";
 //import { useNavigation } from "@react-navigation/native";
-const LabourGangUsage=({navigation}:{navigation:any})=>{
+const LabourGangUsageRail=({navigation}:{navigation:any})=>{
     const [isModalVisible, setModalVisible] = useState(false);
      
     const items = [
@@ -41,14 +44,18 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
         },
       ];
     return(
-        // <CustomLinearGradient>
-        <ScrollView>
+        
+        <KeyboardAvoidingView
+        style={Styles.homeContainer}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={100}>
+        <ScrollView contentContainerStyle={Styles.scrollViewConatiner}>
         <View >
             <View style={{flexDirection:'row',marginTop:10,}}>
-           <MenuButton />
+           <MenuButton/>
            
-           <Text style={GenericInputFieldStyles.titleStyle}> Labour Gang Usage</Text>
-        
+           <Text style={GenericInputFieldStyles.titleStyle}> Labour Gang Usage(Rail)</Text>
+                  
            </View>
             <View style={{flexDirection:'row'}}>
                 <MaterialCommunityIcons name="qrcode-scan" size={50} color="#317064"  style={GenericScanIconStyle.container}/>
@@ -56,16 +63,38 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
                 <Text style={GenericScanIconStyle.text}>Scan QRCode</Text>
                </View>
               </View>
-              <GenericDropDown
-                    label="Token Number"
+              <GenericDropDown1
+                    label="Reference Number"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
                     />
-              <GenericCalenderField
-             label="Date"
-             placeholder="Date"
-            
+                     <GenericDropDown1
+                    label="Reference Number"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
+                     <GenericDropDown1
+                    label="Reference Number"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
+                     <GenericDropDown1
+                    label="Reference Number"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
+              <GenericDropDown1
+                    label="OperationAt"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
+             <GenericInputField
+            label="Date"
+            placeholder="Date"
             />
-            
+             <GenericDropDown1
+                    label="OperationAt"
+                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    />
+              <GenericInputField
+            label="Wagon"
+            placeholder="Wagon"
+            />
             <View style={{flexDirection:'row',right:10,top:15,marginBottom:30}}>
                 <Text style={{top:16,fontSize:20,marginLeft:30,marginRight:60,color:'#999999',fontFamily:'serif'}}>Labour Usage Allocation</Text>
                     <GenericButton
@@ -87,7 +116,17 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
             <ModalAlert visible={isModalVisible} setValue={setModalVisible} />
         </View>
         </ScrollView>
-        // </CustomLinearGradient>
+        </KeyboardAvoidingView>
     )
 }
-export default LabourGangUsage;
+const Styles = StyleSheet.create({
+  homeContainer: {
+      flex: 1,
+  },
+  scrollViewConatiner:{
+      flexGrow:1,
+  }
+
+});
+
+export default LabourGangUsageRail;

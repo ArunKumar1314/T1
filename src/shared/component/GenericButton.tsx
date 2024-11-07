@@ -11,8 +11,10 @@ type Props = {
   icon?: string;
   iconColor?: string;
   title: string;
-  buttonWidth?: number | string;
-  buttonHeight?: number | string;
+  buttonWidth?: number | `${number}%` | "auto";
+  buttonHeight?: number | `${number}%` | "auto";
+  backroundColor?:string;
+  borderWidth?:number;
   onPress: () => void;
 };
 
@@ -27,6 +29,8 @@ export default function GenericButton({
   title,
   buttonWidth,
   buttonHeight,
+  backroundColor,
+  borderWidth,
   onPress,
   ...rest
 }: Props) {
@@ -34,7 +38,9 @@ export default function GenericButton({
     <View style={[GenericButtonStyles.conatiner, containerStyles]}>
       
       <Button
-        style={[GenericButtonStyles.button, buttonStyles,buttonWidth ? { width: buttonWidth } : '',buttonHeight ? { height: buttonHeight } : '',]}
+        style={[GenericButtonStyles.button, buttonStyles,
+          buttonWidth ? { width: buttonWidth } : {},
+          buttonHeight ? { height: buttonHeight } : {}]}
         labelStyle={[GenericButtonStyles.labelStyle, labelStyles]}
         mode="contained"
         buttonColor={buttonColor}

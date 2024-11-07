@@ -48,7 +48,7 @@ export default function GenericInputField({
 
   return (
     <View style={[GenericInputFieldStyles.container, containerStyles]}>
-      <Text style={[GenericLabelStyles.container,titleStyle]}>{label}</Text>
+      <Text style={[GenericLabelStyles.container,GenericInputFieldStyles.inputTitleStyle]}>{label}</Text>
       <TextInput
         onBlur={blurHandler}
         onFocus={focusHandler}
