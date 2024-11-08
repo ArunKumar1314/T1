@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {View,Text,StyleSheet,ScrollView, ImageBackground}from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { GenericHeaderStyle, GenericHeaderStyles, GenericInputFieldStyles, GenericLogoStyles, GenericScanIconStyle } from "../styles/styles";
+import { GenericHeaderStyle, GenericInputFieldStyles, GenericLogoStyles, GenericScanIconStyle } from "../styles/styles";
 import { TouchableOpacity } from "react-native";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
 import { Image } from "react-native";

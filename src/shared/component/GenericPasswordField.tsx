@@ -72,6 +72,7 @@ export default function GenericPasswordField({
             buttonContainerStyles,
             { paddingLeft: 15, paddingRight: 40, },
             isFocused && GenericInputFieldStyles.borderChange,
+            error && GenericPasswordFieldStyles.errorBorderChange
           ]}
           secureTextEntry={!passwordVisible}
           {...rest}
@@ -87,6 +88,9 @@ export default function GenericPasswordField({
           />
         </TouchableOpacity>
       </View>
+      {error &&
+      <Text style={GenericPasswordFieldStyles.passwordErrorText}>Invalid {label}</Text>
+      }
     </View>
   );
 }

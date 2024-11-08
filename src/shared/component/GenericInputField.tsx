@@ -56,11 +56,18 @@ export default function GenericInputField({
         onChangeText={changeTextHandler}
         placeholder={placeholder}
         placeholderTextColor={'black'}
-        style={[GenericInputFieldStyles.buttonContainer, buttonContainerStyles ,IsFocused && GenericInputFieldStyles.borderChange  ]}
+        style={[
+          GenericInputFieldStyles.buttonContainer, buttonContainerStyles ,
+          IsFocused && GenericInputFieldStyles.borderChange ,
+          error && GenericInputFieldStyles.errorBorderChange
+        ]}
         multiline={multiline}
         numberOfLines={lines}
         {...rest}
       />
+      {error &&
+      <Text style={GenericInputFieldStyles.inputErrorText}>Invalid {label}</Text>
+      }
     </View>
   );
 }

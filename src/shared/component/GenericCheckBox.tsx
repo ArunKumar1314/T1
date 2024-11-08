@@ -20,6 +20,7 @@ export default function GenericCheckBox({
   ...rest
 }: Props) {
   const [checked, setChecked] = useState(false);
+  const [error,setError]=useState(false);
 
   function checkhandler(): void {
     setChecked(!checked);
@@ -36,6 +37,10 @@ export default function GenericCheckBox({
       <Text {...rest} style={[GenericCheckBoxStyles.text, textStyles]}>
         {title}
       </Text>
+     {
+      checked &&
+      <Text>{title} should be Checked</Text>
+     }
     </View>
   );
 }

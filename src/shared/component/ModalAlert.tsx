@@ -1,9 +1,7 @@
 import {Modal, ScrollView, StyleSheet, Text, View} from 'react-native';
-import GenericDropDown from './GenericDropDown';
 import GenericCalenderField from './GenericCalenderField';
 import GenericInputField from './GenericInputField';
 import GenericButton from './GenericButton';
-import { GenericButtonStyles } from '../../styles/styles';
 import GenericDropDown1 from './GenericDropDown1';
 
 type Props = {

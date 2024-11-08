@@ -14,13 +14,20 @@ export const GenericInputFieldStyles = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 10,
     fontFamily:'serif',
-  
     },
   borderChange:{
     borderColor:'#317064',
     borderWidth:2,
     color:'#7F7F7F',
-  
+  },
+  errorBorderChange:{
+    borderColor:'red',
+    borderWidth:2,
+  },
+  inputErrorText:{
+    marginLeft:20,
+    color:'red',
+    marginTop:5
   },
   titleStyle:{
     //marginHorizontal:1,//1
@@ -64,6 +71,12 @@ export const GenericCalendarcontainerStyles=StyleSheet.create({
     fontFamily:'serif',
     marginBottom:-15,
     marginTop:1
+  },
+  CalendarErrorText:{
+    marginLeft:20,
+    color:'red',
+    marginTop:15,
+    marginBottom:-20
   },
 });
 export const GenericDropDownStyles = StyleSheet.create({
@@ -130,6 +143,15 @@ export const GenericPasswordFieldStyles = StyleSheet.create({
     paddingHorizontal:10,
     fontFamily:'serif'
   },
+  errorBorderChange:{
+    borderColor:'red',
+    borderWidth:2,
+  },
+  passwordErrorText:{
+    marginLeft:20,
+    color:'red',
+    marginTop:5
+  },
 });
 export const GenericLabelDropDownStyles=StyleSheet.create({
   container:{
@@ -174,7 +196,6 @@ export const GenericCalenderFieldStyles = StyleSheet.create({
   conatiner: {
     flex: 1,
     padding:16,
-    // backgroundColor:'#EAF0EF'
   },
 })
 
@@ -204,24 +225,6 @@ export const GenericToggleButtonStyles = StyleSheet.create({
   switchContainer: {
     transform: [{ scale: 1.5 }],
   },
-})
-
-
-export const GenericHeaderStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    padding: 8,
-  },
-  headerText: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  dividerContainer: {
-    borderWidth:1.5,
-    borderColor:'black',
-  },
-  
 })
 export const  GenericScanIconStyle=StyleSheet.create({
   container:({
@@ -281,13 +284,9 @@ export const GenericDropDownStyles1 = StyleSheet.create({
     zIndex:1
   },
   menuItems: {
-    // marginTop: 40,
   },
   items: {
-    // marginTop: 55,
     width: "100%",
-    // zIndex: 1000,
-    // height: 150,
      marginLeft: 50,
   },
   menuItemsContainer: {
@@ -295,3 +294,8 @@ export const GenericDropDownStyles1 = StyleSheet.create({
     // zIndex: 9999,  // Ensure it stays above other elements
   },
 });
+export const GenericScreenStyles=StyleSheet.create({
+  container:{
+  // backgroundColor:'#FEFEFE'
+  }
+})

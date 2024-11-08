@@ -6,11 +6,11 @@ import GenericButton from "../shared/component/GenericButton";
 import { GenericInputFieldStyles,GenericScanIconStyle } from "../styles/styles";
 import GenericList from "../shared/component/GenericList";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import GenericDropDown from "../shared/component/GenericDropDown";
 import ModalAlert from "../shared/component/ModalAlert";
 import MenuButton from "./menuButton";
 import PopUpForLabourAllocation from "./PopUpForLabourAllocation";
 import GenericDropDown1 from "../shared/component/GenericDropDown1";
+import GenericScanComponent from "../shared/component/GenericScanComponent";
 //import { useNavigation } from "@react-navigation/native";
 const LabourGangAllocation=({navigation}:{navigation:any})=>{
     const [isModalVisible, setModalVisible] = useState(false);
@@ -44,12 +44,7 @@ const LabourGangAllocation=({navigation}:{navigation:any})=>{
         <ScrollView>
         <View>
         
-            <View style={{flexDirection:'row'}}>
-                <MaterialCommunityIcons name="qrcode-scan" size={40} color="#317064"  style={GenericScanIconStyle.container}/>
-               <View  style={GenericScanIconStyle.text}>
-                <Text style={GenericScanIconStyle.text}>Scan QRCode</Text>
-               </View>
-              </View>
+        <GenericScanComponent/>
             <GenericDropDown1
                     label="Reference Number"
                     Options={[{ title: "1", value: "1" }, { title: "2", value: "2" }]} 

@@ -6,8 +6,7 @@ import GenericCheckBox from "../shared/component/GenericCheckBox";
 import CustomLinearGradient from "../shared/component/CustomLinearGradient";
 import GenericCalenderField from "../shared/component/GenericCalenderField";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { GenericInputFieldStyles, GenericMenuStyles } from "../styles/styles";
-import GenericDropDown from "../shared/component/GenericDropDown";
+import { GenericInputFieldStyles, GenericMenuStyles, GenericScreenStyles } from "../styles/styles";
 import Header from "./Header";
 import MenuButton from "./menuButton";
 import GenericDropDown1 from "../shared/component/GenericDropDown1";
@@ -20,7 +19,7 @@ const GangUsageForMiscellianeous=({navigation}:{navigation:any})=>{
             <MenuButton />
             </View>
              */}
-        <View>
+        <View style={GenericScreenStyles.container}>
                 <GenericDropDown1
                     label="Activity"
                     Options={[{ title: "Activity 1", value: "Activity 1" }, { title: "Activity 2", value: "Activity 2" }]} 
@@ -31,9 +30,10 @@ const GangUsageForMiscellianeous=({navigation}:{navigation:any})=>{
                     Options={[{ title: "Labour Gang 1", value: "Labour Gang 1" }, { title: "Labour Gang 2", value: "Labour Gang 1" }]} 
                     />
 
-             <GenericInputField
-            label="Date"
-            placeholder="Date"
+<GenericCalenderField
+             label="Date"
+             placeholder="Date"
+             
             />
              <GenericInputField
             label="No of Bags"

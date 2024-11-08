@@ -3,7 +3,6 @@ import {View,Text,StyleSheet,ScrollView, Platform}from 'react-native';
 import GenericInputField from "../shared/component/GenericInputField";
 import GenericButton from "../shared/component/GenericButton";
 import { GenericInputFieldStyles, GenericLoginLogoStyles, GenericLogoStyles, GenericMenuStyles } from "../styles/styles";
-import GenericDropDown from "../shared/component/GenericDropDown";
 import { Image } from "react-native";
 import GenericPasswordField from "../shared/component/GenericPasswordField";
 import { KeyboardAvoidingView } from "react-native";

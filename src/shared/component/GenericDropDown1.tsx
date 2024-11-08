@@ -38,35 +38,36 @@ export default function GenericDropDown1({
   const options: Option[] = Options;
 
   const [selected, setSelected] = useState<string>('');
-  const [visible, setVisible] = useState<boolean>(false); // Keep the dropdown open
+  const [visible, setVisible] = useState<boolean>(false); 
   const [searchedValue, setSearchedValue] = useState<Option[]>(options);
+  const [error,setError]=useState(false);
 
-  // Function to handle opening the menu
   function openMenuHandler(): void {
     setVisible(true);
+    setError(false)
   }
 
-  // Function to close the menu
+
   function closeMenuHandler(): void {
     setVisible(false);
   }
 
-  // Function to handle selecting a value from the menu
   function selectValueHandler(value: string): void {
     const selectedOption = options.find(option => option.value === value);
     if (selectedOption) {
       setSelected(selectedOption.title);
+      setError(false)
     }
     closeMenuHandler();
   }
 
-  // Function to handle text change and filter the options
+
   function changeTextHandler(value: string): void {
     setSelected(value);
     const filter = options.filter(option =>
       option.title.toLowerCase().includes(value.toLowerCase()),
     );
-    setSearchedValue(filter); // Update filtered options based on input
+    setSearchedValue(filter);
   }
 
   return (
@@ -75,11 +76,11 @@ export default function GenericDropDown1({
        <Text style={{marginLeft:10,color:'black',fontFamily:'serif',fontSize:17,fontWeight:'bold'}}>{label}</Text>
       <Portal.Host>
         <Menu
-          visible={visible} // Keep the menu open while typing
-          onDismiss={closeMenuHandler} // Allow closing the menu if requested
+          visible={visible} 
+          onDismiss={closeMenuHandler} 
           style={[
             GenericDropDownStyles1.items,
-            { position: 'absolute', zIndex: 9999, top: '85%',marginLeft:20 }, // Set a higher zIndex here
+            { position: 'absolute', zIndex: 9999, top: '85%',marginLeft:20 },
           ]}
           {...rest}
           anchor={

@@ -28,18 +28,25 @@ export default function GenericCalenderField({
 }: Props) {
   const [selectedDate, setSelectedDate] = useState("");
   const [visible, setVisible] = useState(false);
+  const [error,setError]=useState(false);
+  const [isFocused,setIsFocused]=useState(false);
 
   function openCalenderHandler(): void {
     setVisible(true);
+    setError(false)
   }
 
   function closeCalenderHandler(): void {
     setVisible(false);
+    if(!selectedDate){
+      setError(true)
+    }
   }
 
   function changeDateHandler(value: Date): void {
     const formattedDate = FormattedDate(value);
     setSelectedDate(formattedDate);
+    setError(false)
     closeCalenderHandler();
   }
 
@@ -53,7 +60,8 @@ export default function GenericCalenderField({
         placeholder={label}
         placeholderTextColor={'black'}
         value={selectedDate}
-        style={[GenericCalendarcontainerStyles.buttonContainer, buttonContainerStyles]}
+        style={[GenericCalendarcontainerStyles.buttonContainer, buttonContainerStyles,
+        ]}
         onFocus={openCalenderHandler}
         editable={false}
       />
@@ -61,8 +69,11 @@ export default function GenericCalenderField({
       style={{position:'absolute',right:10,top:2}}>
           <Ionicons name="calendar" size={24} color="#317064" style={{top:5}}/>
         </TouchableOpacity>
+       
       </View>
-     
+      {error && (
+        <Text style={GenericCalendarcontainerStyles.CalendarErrorText}>Date is required</Text>
+      )}
       <DateTimePickerModal
         isVisible={visible}
         mode="date"
