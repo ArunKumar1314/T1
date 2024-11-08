@@ -70,7 +70,7 @@ export default function GenericList({
               <Icon
                 key={icon}
                 name={icon}
-                size={25}
+                size={18}
                 style={[styles.iconStyle, iconStyles]}
                 onPress={() => handleCollapsed(list.id)}
               />
@@ -123,13 +123,13 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 19,
-    fontWeight: "bold",
+    //fontWeight: "bold",
     flex: 1,
-    color:'#AFAFAF'
+    color:'black'
   },
   iconStyle: {
     marginLeft: 10,
-        color:'#AFAFAF',
+    color:'black',
   },
   collapsibleStyle: {
     padding: 10,
@@ -148,10 +148,11 @@ const styles = StyleSheet.create({
   },
   accordinText: {
     fontSize: 16,
-    fontWeight: "bold",
+   // fontWeight: "bold",
     flexShrink: 1,
     flexWrap: "wrap",
-    color:'#AFAFAF'
+    color:'black',
+    fontFamily:'serif'
   },
   inputStyle: {
     borderColor: "green",

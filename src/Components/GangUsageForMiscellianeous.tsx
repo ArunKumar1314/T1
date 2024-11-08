@@ -21,20 +21,14 @@ const GangUsageForMiscellianeous=({navigation}:{navigation:any})=>{
             </View>
              */}
         <View>
-           <View style={{flexDirection:'row',marginTop:10,}}>
-           <MenuButton />
-           
-           <Text style={GenericInputFieldStyles.titleStyle}>Gang Usage For Miscellaneous</Text>
-            <Text style={{marginBottom:10}}>h</Text>
-           </View>
-        
-              <GenericDropDown1
+                <GenericDropDown1
                     label="Activity"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "Activity 1", value: "Activity 1" }, { title: "Activity 2", value: "Activity 2" }]} 
+                  containerStyles={{zIndex:10}}
                     />
               <GenericDropDown1
                     label="Labour Gang"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "Labour Gang 1", value: "Labour Gang 1" }, { title: "Labour Gang 2", value: "Labour Gang 1" }]} 
                     />
 
              <GenericInputField

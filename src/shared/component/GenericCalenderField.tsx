@@ -45,12 +45,13 @@ export default function GenericCalenderField({
 
   return (
     <View style={[GenericCalenderFieldStyles.conatiner]}>
-       <Text style={{color:'#999999',marginLeft:10,marginBottom:10,fontSize:17,fontFamily:'serif'}}>{label}</Text>
+       <Text style={{color:'black',marginLeft:10,marginBottom:10,fontSize:17,fontFamily:'serif',fontWeight:'bold'}}>{label}</Text>
       
       <View style={GenericCalendarcontainerStyles.container}>
      
       <TextInput
         placeholder={label}
+        placeholderTextColor={'black'}
         value={selectedDate}
         style={[GenericCalendarcontainerStyles.buttonContainer, buttonContainerStyles]}
         onFocus={openCalenderHandler}
@@ -58,7 +59,7 @@ export default function GenericCalenderField({
       />
       <TouchableOpacity onPress={openCalenderHandler}
       style={{position:'absolute',right:10,top:2}}>
-          <Ionicons name="calendar" size={30} color="#317064"/>
+          <Ionicons name="calendar" size={24} color="#317064" style={{top:5}}/>
         </TouchableOpacity>
       </View>
      

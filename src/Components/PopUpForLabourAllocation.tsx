@@ -31,14 +31,17 @@ export default function PopUpForLabourAllocation({visible, setValue}: Props) {
           <GenericDropDown1
                     label="Gang Number"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    containerStyles={{zIndex:20}}
                     />
           <GenericDropDown1
                     label="Activity"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    containerStyles={{zIndex:15}}
                     />
             <GenericDropDown1
                     label="Shed"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    containerStyles={{zIndex:10}}
                     />
             <GenericInputField
               label={'No Of Bags'}

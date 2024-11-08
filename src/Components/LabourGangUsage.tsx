@@ -12,6 +12,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import GenericList from "../shared/component/GenericList";
 import ModalAlert from "../shared/component/ModalAlert";
 import MenuButton from "./menuButton";
+import GenericDropDown1 from "../shared/component/GenericDropDown1";
 //import { useNavigation } from "@react-navigation/native";
 const LabourGangUsage=({navigation}:{navigation:any})=>{
     const [isModalVisible, setModalVisible] = useState(false);
@@ -19,7 +20,7 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
     const items = [
         {
           id: "1",
-          title: "Labour Gang 1",
+          title: "Gang Number :  20",
           icons: ["edit", "trash-alt","angle-down"],
           dropDownValues: [
             { title: "Activity", editable: true },
@@ -30,7 +31,7 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
         },
         {
           id: "2",
-          title: "Labour Gang 2",
+          title: "Gang Number :  21",
           icons: ["edit", "trash-alt","angle-down"],
           dropDownValues: [
             { title: "Activity", editable: false },
@@ -44,21 +45,15 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
         // <CustomLinearGradient>
         <ScrollView>
         <View >
-            <View style={{flexDirection:'row',marginTop:10,}}>
-           <MenuButton />
-           
-           <Text style={GenericInputFieldStyles.titleStyle}> Labour Gang Usage</Text>
-        
-           </View>
             <View style={{flexDirection:'row'}}>
-                <MaterialCommunityIcons name="qrcode-scan" size={50} color="#317064"  style={GenericScanIconStyle.container}/>
+                <MaterialCommunityIcons name="qrcode-scan" size={40} color="#317064"  style={GenericScanIconStyle.container}/>
                <View  style={GenericScanIconStyle.text}>
                 <Text style={GenericScanIconStyle.text}>Scan QRCode</Text>
                </View>
               </View>
-              <GenericDropDown
+              <GenericDropDown1
                     label="Token Number"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "101", value: "101" }, { title: "102", value: "102" }]} 
                     />
               <GenericCalenderField
              label="Date"
@@ -67,7 +62,7 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
             />
             
             <View style={{flexDirection:'row',right:10,top:15,marginBottom:30}}>
-                <Text style={{top:16,fontSize:20,marginLeft:30,marginRight:60,color:'#999999',fontFamily:'serif'}}>Labour Usage Allocation</Text>
+                <Text style={{top:16,fontSize:19,marginLeft:30,marginRight:60,color:'black',fontWeight:'bold',fontFamily:'serif'}}>Labour Usage Allocation</Text>
                     <GenericButton
                         title="Add"
                         buttonWidth={90}

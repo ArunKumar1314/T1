@@ -25,7 +25,7 @@ const Login=({navigation}:{navigation:any})=>{
               />
               <GenericDropDown1
                     label="Login Type"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "Admin", value: "Admin" }, { title: "Depot Manager", value: "Depot Manager " }, { title: "Regional Manager", value: "Regional Manager " }]} 
                     />
              <GenericInputField
             label="Username"

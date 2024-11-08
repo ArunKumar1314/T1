@@ -22,7 +22,7 @@ const LabourGangUsageRail=({navigation}:{navigation:any})=>{
     const items = [
         {
           id: "1",
-          title: "Labour Gang 1",
+          title: "Gang Number :  20",
           icons: ["edit", "trash-alt","angle-down"],
           dropDownValues: [
             { title: "Activity", editable: true },
@@ -33,7 +33,7 @@ const LabourGangUsageRail=({navigation}:{navigation:any})=>{
         },
         {
           id: "2",
-          title: "Labour Gang 2",
+          title: "Gang Number :  21",
           icons: ["edit", "trash-alt","angle-down"],
           dropDownValues: [
             { title: "Activity", editable: false },
@@ -45,58 +45,39 @@ const LabourGangUsageRail=({navigation}:{navigation:any})=>{
       ];
     return(
         
-        <KeyboardAvoidingView
-        style={Styles.homeContainer}
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        keyboardVerticalOffset={100}>
+        // <KeyboardAvoidingView
+        // style={Styles.homeContainer}
+        // behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        // keyboardVerticalOffset={100}>
         <ScrollView contentContainerStyle={Styles.scrollViewConatiner}>
         <View >
-            <View style={{flexDirection:'row',marginTop:10,}}>
-           <MenuButton/>
-           
-           <Text style={GenericInputFieldStyles.titleStyle}> Labour Gang Usage(Rail)</Text>
-                  
-           </View>
+            
             <View style={{flexDirection:'row'}}>
-                <MaterialCommunityIcons name="qrcode-scan" size={50} color="#317064"  style={GenericScanIconStyle.container}/>
+                <MaterialCommunityIcons name="qrcode-scan" size={40} color="#317064"  style={GenericScanIconStyle.container}/>
                <View  style={GenericScanIconStyle.text}>
                 <Text style={GenericScanIconStyle.text}>Scan QRCode</Text>
                </View>
               </View>
-              <GenericDropDown1
-                    label="Reference Number"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
-                    />
                      <GenericDropDown1
                     label="Reference Number"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
-                    />
-                     <GenericDropDown1
-                    label="Reference Number"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
-                    />
-                     <GenericDropDown1
-                    label="Reference Number"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "1", value: "1" }, { title: "2", value: "2" }]} 
+                    containerStyles={{zIndex:10}}
                     />
               <GenericDropDown1
                     label="OperationAt"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "1", value: "1" }, { title: "2", value: "2" }]} 
                     />
-             <GenericInputField
-            label="Date"
-            placeholder="Date"
+            <GenericCalenderField
+             label="Date"
+             placeholder="Date"
+            
             />
-             <GenericDropDown1
-                    label="OperationAt"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
-                    />
               <GenericInputField
             label="Wagon"
             placeholder="Wagon"
             />
             <View style={{flexDirection:'row',right:10,top:15,marginBottom:30}}>
-                <Text style={{top:16,fontSize:20,marginLeft:30,marginRight:60,color:'#999999',fontFamily:'serif'}}>Labour Usage Allocation</Text>
+                <Text style={{top:16,fontSize:19,marginLeft:30,marginRight:60,color:'black',fontFamily:'serif',fontWeight:'bold'}}>Labour Usage Allocation</Text>
                     <GenericButton
                         title="Add"
                         buttonWidth={90}
@@ -116,16 +97,17 @@ const LabourGangUsageRail=({navigation}:{navigation:any})=>{
             <ModalAlert visible={isModalVisible} setValue={setModalVisible} />
         </View>
         </ScrollView>
-        </KeyboardAvoidingView>
+        // </KeyboardAvoidingView>
     )
 }
 const Styles = StyleSheet.create({
   homeContainer: {
       flex: 1,
   },
-  scrollViewConatiner:{
-      flexGrow:1,
-  }
+ scrollViewConatiner:{
+     flexGrow:1,
+     paddingBottom: 50, 
+ }
 
 });
 

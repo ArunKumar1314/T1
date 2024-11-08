@@ -17,7 +17,7 @@ const LabourGangAllocation=({navigation}:{navigation:any})=>{
     const items = [
         {
           id: "1",
-          title: "Gang 20 : ",
+          title: "Gang Number :  20",
           icons: ["edit", "trash-alt","angle-down"],
           dropDownValues: [
             { title: "Activity", editable: false },
@@ -28,7 +28,7 @@ const LabourGangAllocation=({navigation}:{navigation:any})=>{
         },
         {
           id: "2",
-          title: "Gang 21 : ",
+          title: "Gang Number :  21",
           icons: ["edit", "trash-alt","angle-down"],
           dropDownValues: [
             { title: "Activity", editable: false },
@@ -43,24 +43,19 @@ const LabourGangAllocation=({navigation}:{navigation:any})=>{
      
         <ScrollView>
         <View>
-        <View style={{flexDirection:'row',marginTop:10,}}>
-           <MenuButton />
-           
-           <Text style={GenericInputFieldStyles.titleStyle}>Labour Gang Allocation</Text>
         
-           </View>
             <View style={{flexDirection:'row'}}>
-                <MaterialCommunityIcons name="qrcode-scan" size={50} color="#317064"  style={GenericScanIconStyle.container}/>
+                <MaterialCommunityIcons name="qrcode-scan" size={40} color="#317064"  style={GenericScanIconStyle.container}/>
                <View  style={GenericScanIconStyle.text}>
                 <Text style={GenericScanIconStyle.text}>Scan QRCode</Text>
                </View>
               </View>
             <GenericDropDown1
                     label="Reference Number"
-                    Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    Options={[{ title: "1", value: "1" }, { title: "2", value: "2" }]} 
                     />
         <View style={{flexDirection:'row',right:10,top:15,marginBottom:30}}>
-                <Text style={{top:16,fontSize:20,marginLeft:30,marginRight:60,fontFamily:'serif',color:'#999999'}}>Labour Usage Allocation</Text>
+                <Text style={{top:16,fontSize:19,marginLeft:30,marginRight:60,fontFamily:'serif',color:'black',fontWeight:'bold'}}>Labour Usage Allocation</Text>
                     <GenericButton
                         title="Add"
                         buttonWidth={90}

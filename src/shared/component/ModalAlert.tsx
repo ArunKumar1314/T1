@@ -32,7 +32,9 @@ export default function ModalAlert({visible, setValue}: Props) {
           <GenericDropDown1
                     label="Activity"
                     Options={[{ title: "select 1", value: "1" }, { title: "select 2", value: "2" }]} 
+                    containerStyles={{zIndex:20}}
                     />
+                   
             <GenericCalenderField
               label={'Start Time'}
               placeholder={'Start Time'}
@@ -42,9 +44,19 @@ export default function ModalAlert({visible, setValue}: Props) {
               label={'No Of Bags'}
               placeholder={'No Of Bags'}
             />
-            <GenericDropDown1 Options={[]} label={'Labour Gang'} />
+             <GenericDropDown1
+                    label="Labour Gang"
+                    Options={[{ title: "LabourGang 1", value: "LabourGang 1" }, { title: "LabourGang 2", value: "LabourGang 2" }]} 
+                    containerStyles={{zIndex:15}}
+                    />
+                    <GenericDropDown1
+                    label="Stack Name"
+                    Options={[{ title: "Stack 1", value: "Stack 1" }, { title: "Stack 2 ", value: "Stack 2" }]} 
+                    containerStyles={{zIndex:5}}
+                    />
             <GenericInputField label={'Lead'} placeholder={'Lead'} />
-            <GenericDropDown1 Options={[]} label={'Stack Name'} />
+     
+            
             <View style={styles.buttonContainer}>
              
               <GenericButton

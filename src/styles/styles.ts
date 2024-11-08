@@ -5,16 +5,17 @@ export const GenericInputFieldStyles = StyleSheet.create({
     flex: 1,
     padding: 1,
     marginHorizontal:15,
-    borderColor:'yellow',
+      color:'red',
   },
   buttonContainer: {
     width: "100%",
     backgroundColor: "#EAF0EF",//changed
-    borderColor:"#90B1AA",//c
+    borderColor:"#317064",//c
     borderRadius: 10,
     paddingHorizontal: 10,
-    fontFamily:'serif'
-  },
+    fontFamily:'serif',
+  
+    },
   borderChange:{
     borderColor:'#317064',
     borderWidth:2,
@@ -23,15 +24,30 @@ export const GenericInputFieldStyles = StyleSheet.create({
   },
   titleStyle:{
     //marginHorizontal:1,//1
-    padding:10,
+    //padding:10,
     fontSize:25,
     color:'black',
     fontFamily:'serif',
-    textAlign:'center',
-    
+    // alignContent:'center',
+    // justifyContent:'center',
+    alignItems:'center',
+    textAlignVertical:'center',
+   // marginHorizontal:26,
+    marginTop:15,
+},
+titleHStyle:{
+  fontSize:25,
+  color:'black',
+  fontFamily:'serif',
+alignContent:'center',
+alignItems:'center',
+  textAlignVertical:'center',
+  marginHorizontal:26,
+  //marginTop:3
 },
 inputTitleStyle:{
   fontSize:17,
+  
 }
 });
 export const GenericCalendarcontainerStyles=StyleSheet.create({
@@ -57,15 +73,18 @@ export const GenericDropDownStyles = StyleSheet.create({
     marginHorizontal: 15,
     borderColor: 'yellow',
     marginLeft: 15,
+    
   },
   menuItems: {
     marginTop: 40,
+    zIndex:1324234
   },
   items: {
     marginTop: 17,
     width: "80%",
     height: 200,
     marginLeft: 6,
+    zIndex:1
   },
   labelContainer: {
     marginBottom: 10, // Adjust the space between label and input
@@ -75,6 +94,17 @@ export const GenericDropDownStyles = StyleSheet.create({
   containerLabel:{
     marginHorizontal: 15,
     marginLeft: 10,
+    
+  },
+  buttonContainer:{
+    width: "100%",
+    backgroundColor: "#EAF0EF",//changed
+    borderColor:"#90B1AA",//c
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    fontFamily:'serif',
+    marginTop:10,
+    marginBottom:-20
   }
 });
 
@@ -97,7 +127,7 @@ export const GenericPasswordFieldStyles = StyleSheet.create({
     backgroundColor: "#EAF0EF",//changed
     borderColor:"#90B1AA",//c
     borderRadius: 10,
-    paddingHorizontal:40,
+    paddingHorizontal:10,
     fontFamily:'serif'
   },
 });
@@ -105,13 +135,14 @@ export const GenericLabelDropDownStyles=StyleSheet.create({
   container:{
     padding:10,
     color:'#999999',
-   fontFamily:'serif'
+   fontFamily:'serif',
   }
   });
 export const GenericLabelStyles=StyleSheet.create({
 container:{
   padding:10,
-  color:'#999999',
+  color:'black',
+  fontWeight: 'bold',
  fontFamily:'serif'
 }
 });
@@ -120,7 +151,7 @@ export const GenericButtonStyles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop:5,
+    marginTop:10,
     marginBottom:5,
   },
   button:{
@@ -158,7 +189,7 @@ export const GenericCheckBoxStyles = StyleSheet.create({
   text: {
     fontSize: 18,
      fontFamily:'serif',
-    color:'#AFAFAF'
+    color:'black'
   },
 })
 
@@ -200,7 +231,7 @@ export const  GenericScanIconStyle=StyleSheet.create({
   }),
   text:{
     fontSize:20,
-    right:60,
+    right:50,
     top:17,
 
   }
@@ -219,7 +250,8 @@ export const GenericHeaderStyle=StyleSheet.create({
   title:{
     fontSize:30,
     marginLeft:10,
-    marginTop:35
+    marginTop:35,
+    
   }
 })
 export const GenericLogoStyles=StyleSheet.create({

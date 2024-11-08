@@ -55,6 +55,7 @@ export default function GenericInputField({
         value={text}
         onChangeText={changeTextHandler}
         placeholder={placeholder}
+        placeholderTextColor={'black'}
         style={[GenericInputFieldStyles.buttonContainer, buttonContainerStyles ,IsFocused && GenericInputFieldStyles.borderChange  ]}
         multiline={multiline}
         numberOfLines={lines}
