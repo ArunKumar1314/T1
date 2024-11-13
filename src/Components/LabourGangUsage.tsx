@@ -9,6 +9,7 @@ import ModalAlert from "../shared/component/ModalAlert";
 import MenuButton from "./menuButton";
 import GenericDropDown1 from "../shared/component/GenericDropDown1";
 import GenericScanComponent from "../shared/component/GenericScanComponent";
+import GenericDropDown2 from "../shared/component/GenericDRopDown2";
 //import { useNavigation } from "@react-navigation/native";
 const LabourGangUsage=({navigation}:{navigation:any})=>{
     const [isModalVisible, setModalVisible] = useState(false);
@@ -37,38 +38,59 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
           ],
         },
       ];
+      const Tokenoptions = [
+        { title: '1', value: '1' },
+        { title: '2', value: '2' },
+        
+      ];
+      const [visibleDropdown, setVisibleDropdown] = useState<string | null>(null); 
+      const [selectedValues, setSelectedValues] = useState<{ [key: string]: string }>({
+        dropdown1: '',
+        dropdown2: '',
+        dropdown3: '',
+      });
+      const handleSetSelectedValue = (id: string, value: string) => {
+        setSelectedValues(prevValues => ({ ...prevValues, [id]: value }));
+      };
     return(
         // <CustomLinearGradient>
         <ScrollView>
         <View >
         <GenericScanComponent/>
-              <GenericDropDown1
-                    label="Token Number"
-                    Options={[{ title: "101", value: "101" }, { title: "102", value: "102" }]} 
-                    />
+        <GenericDropDown2
+                id="dropdown1"
+                Options={Tokenoptions }
+                label="Token Number"
+                isVisible={visibleDropdown === 'dropdown1'}
+                setIsVisible={setVisibleDropdown}
+                selectedValue={selectedValues.dropdown1}
+                setSelectedValue={handleSetSelectedValue}
+                containerStyles={{zIndex:30}}
+        />
+
               <GenericCalenderField
              label="Date"
              placeholder="Date"
             
             />
-            
-            <View style={{flexDirection:'row',right:10,top:15,marginBottom:30}}>
-                <Text style={{top:16,fontSize:19,marginLeft:30,marginRight:60,color:'black',fontWeight:'bold',fontFamily:'serif'}}>Labour Usage Allocation</Text>
-                    <GenericButton
+            <View style={{flexDirection:'row',alignItems:'center'}}>
+              <Text style={Styles.addContainer}>Labour Usage</Text>
+            <GenericButton
                         title="Add"
-                        buttonWidth={90}
-                        buttonHeight={40}
+                        buttonStyles={{width:'80%',height:50}}
                         icon="plus"
                         iconColor="white"
                         onPress={()=>setModalVisible(true)}
                     />
             </View>
+          
               <GenericList
                 items={items}
             />
             <GenericButton
             title={"Submit"}
             onPress={()=>{}}
+            buttonStyles={{width:'80%'}}
             />
             <ModalAlert visible={isModalVisible} setValue={setModalVisible} />
         </View>
@@ -76,4 +98,11 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
         // </CustomLinearGradient>
     )
 }
+const Styles=StyleSheet.create({
+  addContainer:{
+    marginRight:100,marginLeft:30,fontSize:17,fontFamily:'serif',
+    fontWeight:'bold'
+  }
+})
+
 export default LabourGangUsage;

@@ -37,10 +37,7 @@ export default function GenericCheckBox({
       <Text {...rest} style={[GenericCheckBoxStyles.text, textStyles]}>
         {title}
       </Text>
-     {
-      checked &&
-      <Text>{title} should be Checked</Text>
-     }
+     
     </View>
   );
 }

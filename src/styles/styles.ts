@@ -169,26 +169,27 @@ container:{
 }
 });
 export const GenericButtonStyles = StyleSheet.create({
-  conatiner: {
+  container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop:10,
+    marginTop:15,
     marginBottom:5,
+    width:'100%',
+    fontFamily:'serif'
   },
   button:{
     alignItems: "center",
     justifyContent: "center",
-    width:"60%",
-    height:45,
     borderWidth:1,
     borderRadius:10,
     marginBottom:5,
-    //backgroundColor:'white'
+    width:'100%',
+    fontFamily:'serif'
   },
   labelStyle:{
-    fontSize:16,
-   fontFamily:'serif'
+    fontSize:10,
+    fontFamily:'serif',
   }
 });
 
@@ -210,7 +211,7 @@ export const GenericCheckBoxStyles = StyleSheet.create({
   text: {
     fontSize: 18,
      fontFamily:'serif',
-    color:'black'
+    color:'black',fontWeight:'bold'
   },
 })
 
@@ -286,8 +287,7 @@ export const GenericDropDownStyles1 = StyleSheet.create({
   menuItems: {
   },
   items: {
-    width: "100%",
-     marginLeft: 50,
+    width: "91%",
   },
   menuItemsContainer: {
     width: '100%',
@@ -299,3 +299,29 @@ export const GenericScreenStyles=StyleSheet.create({
   // backgroundColor:'#FEFEFE'
   }
 })
+export const GenericAddButtonStyles=StyleSheet.create({
+  container:{
+    height:10,
+  }
+})
+export const GenericButtonStyles1 = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    margin:10,
+    borderRadius:15,
+  },
+  button:{
+    // alignItems: "center",
+    justifyContent: "center",
+    // borderWidth:2,
+    borderColor:'black',
+    // width:'100%'
+    borderRadius:10,
+  },
+  labelStyle:{
+    fontSize:17,
+    fontFamily:'serif'
+  }
+});

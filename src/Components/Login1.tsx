@@ -7,7 +7,7 @@ import { Image } from "react-native";
 import GenericPasswordField from "../shared/component/GenericPasswordField";
 import { KeyboardAvoidingView } from "react-native";
 import GenericDropDown2 from "../shared/component/GenericDRopDown2";
-const Login=({navigation}:{navigation:any})=>{
+const Login1=({navigation}:{navigation:any})=>{
     useEffect(() => {
         const backAction = () => {
           if (navigation.isFocused()) {
@@ -90,4 +90,4 @@ const Login=({navigation}:{navigation:any})=>{
         </KeyboardAvoidingView>
     )
 }
-export default Login;
+export default Login1;

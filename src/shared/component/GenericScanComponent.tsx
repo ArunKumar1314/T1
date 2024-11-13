@@ -6,7 +6,7 @@ export default function GenericScanComponent(){
         <View style={{flexDirection:'row'}}>
         <MaterialCommunityIcons name="qrcode-scan" size={40} color="#317064"  style={GenericScanIconStyle.container}/>
         <View  style={GenericScanIconStyle.text}>
-        <Text style={GenericScanIconStyle.text}>Scan QRCode</Text>
+        <Text style={GenericScanIconStyle.text}>Scan QR Code</Text>
         </View>
         </View>
     )

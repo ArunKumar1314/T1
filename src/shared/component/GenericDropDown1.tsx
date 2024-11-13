@@ -23,6 +23,7 @@ type Props = {
   buttonContainerStyles?: StyleProp<ViewStyle>;
   icon?: string;
   zIndex?:number;
+  marginLeft?:number;
 };
 
 export default function GenericDropDown1({
@@ -33,6 +34,7 @@ export default function GenericDropDown1({
   buttonContainerStyles,
   icon = 'menu-down',
   zIndex,
+  marginLeft=-10,
   ...rest
 }: Props) {
   const options: Option[] = Options;
@@ -80,7 +82,7 @@ export default function GenericDropDown1({
           onDismiss={closeMenuHandler} 
           style={[
             GenericDropDownStyles1.items,
-            { position: 'absolute', zIndex: 9999, top: '85%',marginLeft:20 },
+            { position: 'absolute', zIndex: 9999, top: '85%',marginLeft:marginLeft },
           ]}
           {...rest}
           anchor={
@@ -94,15 +96,16 @@ export default function GenericDropDown1({
                 
               ]}
               onFocus={openMenuHandler}
+              onBlur={closeMenuHandler}
               onChangeText={changeTextHandler}
               placeholderTextColor={'black'}
             />
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={openMenuHandler}
               style={{ position: 'absolute', right: 10, top: 15 }}
             >
               <MaterialCommunityIcons name="menu-down" size={30} color="#317064" />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
           }>
           <View style={{ zIndex: 9999 }}>

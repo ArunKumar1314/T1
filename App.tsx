@@ -15,6 +15,7 @@ import Header from './src/Components/Header';
 import {View, Image} from 'react-native';
 import Login from './src/Components/Login';
 import LabourGangUsageRail from './src/Components/LabourGangUsageRail';
+import Login1 from './src/Components/Login1';
 const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = props => (
@@ -37,11 +38,30 @@ const App = () => {
                 width: '90%',
               },
               headerTitleAlign: 'center',
-              headerTitleStyle: {fontFamily: 'serif', fontWeight: 'bold', fontSize:18},
+              headerTitleStyle: {fontFamily: 'serif', fontWeight: 'bold', fontSize:15},
               headerStyle: {
                 // backgroundColor: 'red',
               },
             }}>
+               <Drawer.Screen
+              name="Login1"
+              component={Login1}
+              options={{
+                title: 'Logout',
+                headerShown: false,
+                drawerLabelStyle: {
+                  fontFamily: 'serif',
+                  fontSize: 18,
+                  color: 'red',
+                  marginLeft: 55,
+                },
+                drawerItemStyle: {
+                  display: 'none',  // This hides the Login screen from the drawer
+                },
+                drawerActiveTintColor: '#317064',
+                // drawerIcon: ({ color, size }) => <Icon name="account-group" size={size} color={color} />,
+              }}
+            />   
             <Drawer.Screen
               name="Labour Gang Usage Rail"
               component={LabourGangUsageRail}
@@ -103,7 +123,7 @@ const App = () => {
                 ),
               }}
             />
-            <Drawer.Screen
+           <Drawer.Screen
               name="Login"
               component={Login}
               options={{
@@ -115,10 +135,14 @@ const App = () => {
                   color: 'red',
                   marginLeft: 55,
                 },
+                drawerItemStyle: {
+                  //display: 'none',  // This hides the Login screen from the drawer
+                },
                 drawerActiveTintColor: '#317064',
                 // drawerIcon: ({ color, size }) => <Icon name="account-group" size={size} color={color} />,
               }}
             />
+           
           </Drawer.Navigator>
         </NavigationContainer>
       </Provider>

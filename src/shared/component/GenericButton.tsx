@@ -1,6 +1,6 @@
 import { View, StyleProp, ViewStyle, TextStyle } from "react-native";
 import { Button, IconButton } from "react-native-paper";
-import { GenericButtonStyles } from "../../styles/styles";
+import { GenericButtonStyles1 } from "../../styles/styles";
 
 type Props = {
   containerStyles?: StyleProp<ViewStyle>;
@@ -11,10 +11,8 @@ type Props = {
   icon?: string;
   iconColor?: string;
   title: string;
-  buttonWidth?: number | `${number}%` | "auto";
-  buttonHeight?: number | `${number}%` | "auto";
-  backroundColor?:string;
-  borderWidth?:number;
+  width?:string;
+  buttonWidth?: number | `${number}%`;
   onPress: () => void;
 };
 
@@ -25,23 +23,22 @@ export default function GenericButton({
   buttonColor = "#317064",//c
   textColor = "white",//c
   icon,
+  // width='80%',
   iconColor,
   title,
-  buttonWidth,
-  buttonHeight,
-  backroundColor,
-  borderWidth,
+  buttonWidth='100%',
+
   onPress,
   ...rest
 }: Props) {
   return (
-    <View style={[GenericButtonStyles.conatiner, containerStyles]}>
+    <View style={[GenericButtonStyles1.container, containerStyles]}>
       
       <Button
-        style={[GenericButtonStyles.button, buttonStyles,
-          buttonWidth ? { width: buttonWidth } : {},
-          buttonHeight ? { height: buttonHeight } : {}]}
-        labelStyle={[GenericButtonStyles.labelStyle, labelStyles]}
+        style={[GenericButtonStyles1.button, buttonStyles,
+        // { width: buttonWidth},
+         ]}
+        labelStyle={[GenericButtonStyles1.labelStyle, labelStyles]}
         mode="contained"
         buttonColor={buttonColor}
         textColor={textColor}
@@ -62,7 +59,7 @@ export default function GenericButton({
         }
       >
         {title}
-      </Button>
+        </Button>
     </View>
   );
 }
