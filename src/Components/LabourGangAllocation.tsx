@@ -101,10 +101,10 @@ const LabourGangAllocation=({navigation}:{navigation:any})=>{
 const style=StyleSheet.create({
 tex:{
     fontSize:45,
-    fontFamily:'serif'
+    fontFamily:'Roboto'
 },
 addContainer:{
-  marginRight:90,marginLeft:30,fontSize:17,fontFamily:'serif',
+  marginRight:90,marginLeft:30,fontSize:17,fontFamily:'Roboto',
   fontWeight:'bold'
 }
 

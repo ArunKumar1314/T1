@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
   },
   titleStyles: {
-    fontFamily: 'serif',
+    fontFamily: 'Roboto',
     fontSize: 20,
     fontStyle: 'normal',
     fontWeight: 'bold',

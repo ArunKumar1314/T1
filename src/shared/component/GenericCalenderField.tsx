@@ -52,7 +52,7 @@ export default function GenericCalenderField({
 
   return (
     <View style={[GenericCalenderFieldStyles.conatiner]}>
-       <Text style={{color:'black',marginLeft:10,marginBottom:10,fontSize:17,fontFamily:'serif',fontWeight:'bold'}}>{label}</Text>
+       <Text style={{color:'black',marginLeft:10,marginBottom:10,fontSize:17,fontFamily:'Roboto',fontWeight:'bold'}}>{label}</Text>
       
       <View style={GenericCalendarcontainerStyles.container}>
      

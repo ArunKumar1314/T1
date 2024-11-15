@@ -64,11 +64,13 @@ const Login=({navigation}:{navigation:any})=>{
                 setIsVisible={setVisibleDropdown}
                 selectedValue={selectedValues.dropdown1}
                 setSelectedValue={handleSetSelectedValue}
+                iconName="person-circle"
                 containerStyles={{zIndex:40}}
             />
              <GenericInputField
             label="Username"
             placeholder="Username"
+            iconName="person-circle"
             />
             <GenericPasswordField 
             label={"Password"} 

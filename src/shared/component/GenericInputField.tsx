@@ -2,8 +2,10 @@ import {useState} from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
 // import {HelperText, TextInput} from 'react-native-paper';
 import { TextInput,Text} from 'react-native';
-import {GenericInputFieldStyles} from '../../styles/styles';
+import {GenericIconInputStyles, GenericInputFieldStyles} from '../../styles/styles';
 import { GenericLabelStyles } from '../../styles/styles';
+import { TouchableOpacity } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type Props = {
   containerStyles?: StyleProp<ViewStyle>;
@@ -13,6 +15,7 @@ type Props = {
   buttonContainerStyles?: StyleProp<ViewStyle>;
   multiline?: boolean;
   lines?: number;
+  iconName?:string;
 };
 
 export default function GenericInputField({
@@ -23,6 +26,7 @@ export default function GenericInputField({
   buttonContainerStyles,
   multiline,
   lines,
+  iconName,
   ...rest
 }: Props) {
   const [text, setText] = useState('');
@@ -49,7 +53,17 @@ export default function GenericInputField({
   return (
     <View style={[GenericInputFieldStyles.container, containerStyles]}>
       <Text style={[GenericLabelStyles.container,GenericInputFieldStyles.inputTitleStyle]}>{label}</Text>
+      <View>
+      {iconName &&
+      <Ionicons
+      name={iconName}
+      size={25}
+      color="#317064"
+      style={{ position: 'absolute', left: 10,top:5,zIndex:1}}
+    />
+     }
       <TextInput
+      
         onBlur={blurHandler}
         onFocus={focusHandler}
         value={text}
@@ -59,12 +73,16 @@ export default function GenericInputField({
         style={[
           GenericInputFieldStyles.buttonContainer, buttonContainerStyles ,
           IsFocused && GenericInputFieldStyles.borderChange ,
-          error && GenericInputFieldStyles.errorBorderChange
+          error && GenericInputFieldStyles.errorBorderChange,
+          iconName && GenericInputFieldStyles.iconField,
+          iconName && {paddingLeft:40},
         ]}
         multiline={multiline}
         numberOfLines={lines}
         {...rest}
       />
+      </View>
+      
       {error &&
       <Text style={GenericInputFieldStyles.inputErrorText}>Invalid {label}</Text>
       }

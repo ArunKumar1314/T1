@@ -5,7 +5,16 @@ export const GenericInputFieldStyles = StyleSheet.create({
     flex: 1,
     padding: 1,
     marginHorizontal:15,
-      color:'red',
+    color:'red',
+  },
+  iconField:{
+    width: "100%",
+    backgroundColor: "#EAF0EF",//changed
+    borderColor:"#317064",//c
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    fontFamily:'Roboto',
+    paddingLeft:10,
   },
   buttonContainer: {
     width: "100%",
@@ -13,7 +22,7 @@ export const GenericInputFieldStyles = StyleSheet.create({
     borderColor:"#317064",//c
     borderRadius: 10,
     paddingHorizontal: 10,
-    fontFamily:'serif',
+    fontFamily:'Roboto',
     },
   borderChange:{
     borderColor:'#317064',
@@ -34,7 +43,7 @@ export const GenericInputFieldStyles = StyleSheet.create({
     //padding:10,
     fontSize:25,
     color:'black',
-    fontFamily:'serif',
+    fontFamily:'Roboto',
     // alignContent:'center',
     // justifyContent:'center',
     alignItems:'center',
@@ -45,7 +54,7 @@ export const GenericInputFieldStyles = StyleSheet.create({
 titleHStyle:{
   fontSize:25,
   color:'black',
-  fontFamily:'serif',
+  fontFamily:'Roboto',
 alignContent:'center',
 alignItems:'center',
   textAlignVertical:'center',
@@ -68,7 +77,7 @@ export const GenericCalendarcontainerStyles=StyleSheet.create({
     borderColor:"#90B1AA",//c
     borderRadius: 10,
     paddingHorizontal: 10,
-    fontFamily:'serif',
+    fontFamily:'Roboto',
     marginBottom:-15,
     marginTop:1
   },
@@ -115,7 +124,7 @@ export const GenericDropDownStyles = StyleSheet.create({
     borderColor:"#90B1AA",//c
     borderRadius: 10,
     paddingHorizontal: 10,
-    fontFamily:'serif',
+    fontFamily:'Roboto',
     marginTop:10,
     marginBottom:-20
   }
@@ -132,7 +141,7 @@ export const GenericPasswordFieldStyles = StyleSheet.create({
   },
   passwordTitleStyle:{
     fontSize:17,
-    fontFamily:'serif',
+    fontFamily:'Roboto',
     marginLeft:1,
   },
   buttonContainer: {
@@ -141,7 +150,8 @@ export const GenericPasswordFieldStyles = StyleSheet.create({
     borderColor:"#90B1AA",//c
     borderRadius: 10,
     paddingHorizontal:10,
-    fontFamily:'serif'
+    fontFamily:'Roboto',
+    paddingLeft:40,
   },
   errorBorderChange:{
     borderColor:'red',
@@ -157,7 +167,7 @@ export const GenericLabelDropDownStyles=StyleSheet.create({
   container:{
     padding:10,
     color:'#999999',
-   fontFamily:'serif',
+   fontFamily:'Roboto',
   }
   });
 export const GenericLabelStyles=StyleSheet.create({
@@ -165,7 +175,7 @@ container:{
   padding:10,
   color:'black',
   fontWeight: 'bold',
- fontFamily:'serif'
+ fontFamily:'Roboto'
 }
 });
 export const GenericButtonStyles = StyleSheet.create({
@@ -176,7 +186,7 @@ export const GenericButtonStyles = StyleSheet.create({
     marginTop:15,
     marginBottom:5,
     width:'100%',
-    fontFamily:'serif'
+    fontFamily:'Roboto'
   },
   button:{
     alignItems: "center",
@@ -185,11 +195,11 @@ export const GenericButtonStyles = StyleSheet.create({
     borderRadius:10,
     marginBottom:5,
     width:'100%',
-    fontFamily:'serif'
+    fontFamily:'Roboto'
   },
   labelStyle:{
     fontSize:10,
-    fontFamily:'serif',
+    fontFamily:'Roboto',
   }
 });
 
@@ -210,7 +220,7 @@ export const GenericCheckBoxStyles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-     fontFamily:'serif',
+     fontFamily:'Roboto',
     color:'black',fontWeight:'bold'
   },
 })
@@ -248,7 +258,9 @@ export const GenericHeaderStyle=StyleSheet.create({
     backgroundColor:'#EAF0EF',
     borderColor:'#317064',
     borderWidth:1,
-    marginTop:-4,
+    marginTop:-15,
+    width:'105%',
+    marginLeft:-10
     
   },
   title:{
@@ -322,6 +334,11 @@ export const GenericButtonStyles1 = StyleSheet.create({
   },
   labelStyle:{
     fontSize:17,
-    fontFamily:'serif'
+    fontFamily:'Roboto'
   }
 });
+export const GenericIconInputStyles=StyleSheet.create({
+  placeholderChange:{
+    marginLeft:20,
+  }
+})

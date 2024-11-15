@@ -75,7 +75,7 @@ export default function GenericDropDown1({
   return (
     <View style={[GenericDropDownStyles1.container, containerStyles,]}>
      
-       <Text style={{marginLeft:10,color:'black',fontFamily:'serif',fontSize:17,fontWeight:'bold'}}>{label}</Text>
+       <Text style={{marginLeft:10,color:'black',fontFamily:'Roboto',fontSize:17,fontWeight:'bold'}}>{label}</Text>
       <Portal.Host>
         <Menu
           visible={visible} 

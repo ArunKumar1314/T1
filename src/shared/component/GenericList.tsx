@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     flexWrap: "wrap",
     color:'black',
-    fontFamily:'serif'
+    fontFamily:'Roboto'
   },
   inputStyle: {
     borderColor: "green",

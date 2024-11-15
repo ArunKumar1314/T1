@@ -3,6 +3,7 @@ import { View, Text, TextInput, StyleProp, ViewStyle, TouchableOpacity } from 'r
 import { Menu, Portal } from 'react-native-paper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { GenericDropDownStyles, GenericDropDownStyles1 } from '../../styles/styles';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 interface Option {
   title: string;
@@ -15,6 +16,7 @@ type Props = {
   containerStyles?: StyleProp<ViewStyle>;
   itemsStyles?: StyleProp<ViewStyle>;
   label: string;
+  iconName?:string;
   buttonContainerStyles?: StyleProp<ViewStyle>;
   iconClosed?: string;
   iconOpen?: string;
@@ -34,6 +36,7 @@ export default function GenericDropDown2({
   iconClosed = 'menu-down',
   iconOpen = 'menu-up',
   marginLeft = 1,
+  iconName,
   isVisible,
   setIsVisible,
   selectedValue,
@@ -67,7 +70,7 @@ export default function GenericDropDown2({
 
   return (
     <View style={[GenericDropDownStyles1.container, containerStyles]}>
-      <Text style={{ marginLeft: 10, color: 'black', fontFamily: 'serif', fontSize: 17, fontWeight: 'bold' }}>
+      <Text style={{ marginLeft: 10, color: 'black', fontFamily: 'Roboto', fontSize: 17, fontWeight: 'bold' }}>
         {label}
       </Text>
       <Portal.Host>
@@ -80,10 +83,20 @@ export default function GenericDropDown2({
           ]}
           anchor={
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              {iconName &&
+                <Ionicons
+                name={iconName}
+                size={25}
+                color="#317064"
+                style={{ position: 'absolute', left: 10,top:15,zIndex:5}}
+              />
+              }
               <TextInput
                 placeholder={label}
                 value={selectedValue}
-                style={[GenericDropDownStyles.buttonContainer, buttonContainerStyles]}
+                style={[GenericDropDownStyles.buttonContainer, buttonContainerStyles,
+                  iconName && {paddingLeft:40}
+                ]}
                 onFocus={openMenuHandler}
                 onChangeText={changeTextHandler}
                 placeholderTextColor={'black'}

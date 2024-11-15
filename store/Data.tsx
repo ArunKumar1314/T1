@@ -1,0 +1,16 @@
+export const data=[
+    {id:"1",title:"shed 1",iconName:"warehouse",progress:0.3,stackCount:5},
+    {id:"2",title:"shed 2",iconName:"warehouse",progress:0.5,stackCount:3},
+    {id:"3",title:"shed 3",iconName:"warehouse",progress:0.8,stackCount:5},
+    {id:"4",title:"shed 4",iconName:"warehouse",progress:0.3,stackCount:10},
+    {id:"5",title:"shed 5",iconName:"warehouse",progress:0.9,stackCount:5},
+    {id:"6",title:"shed 1",iconName:"warehouse",progress:0.3,stackCount:1},
+    {id:"7",title:"shed 2",iconName:"warehouse",progress:0.5,stackCount:5},
+    {id:"8",title:"shed 3",iconName:"warehouse",progress:0.8,stackCount:2},
+    {id:"9",title:"shed 4",iconName:"warehouse",progress:0.3,stackCount:5},
+    {id:"10",title:"shed 5",iconName:"warehouse",progress:0.9,stackCount:8},
+    {id:"11",title:"shed 2",iconName:"warehouse",progress:0.5,stackCount:6},
+    {id:"12",title:"shed 3",iconName:"warehouse",progress:0.8,stackCount:5},
+    {id:"13",title:"shed 4",iconName:"warehouse",progress:0.3,stackCount:9},
+    {id:"14",title:"shed 5",iconName:"warehouse",progress:0.9,stackCount:5},
+]

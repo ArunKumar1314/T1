@@ -76,6 +76,7 @@ const LabourGangUsageRail=({navigation}:{navigation:any})=>{
                 selectedValue={selectedValues.dropdown1}
                 setSelectedValue={handleSetSelectedValue}
                 containerStyles={{zIndex:40}}
+                
             />
              <GenericDropDown2
                 id="dropdown2"
@@ -97,7 +98,7 @@ const LabourGangUsageRail=({navigation}:{navigation:any})=>{
             placeholder="Wagon"
             />
             {/* <View style={{flexDirection:'row',right:10,top:15,marginBottom:30}}>
-                <Text style={{top:16,fontSize:19,marginLeft:30,marginRight:60,color:'black',fontFamily:'serif',fontWeight:'bold'}}>Labour Usage </Text>
+                <Text style={{top:16,fontSize:19,marginLeft:30,marginRight:60,color:'black',fontFamily:'Roboto',fontWeight:'bold'}}>Labour Usage </Text>
                     <GenericButton
                         title="Add"
                         // buttonWidth={'70%'}
@@ -151,7 +152,7 @@ const Styles = StyleSheet.create({
      paddingBottom: 50, 
  },
 addContainer:{
-  marginRight:100,marginLeft:30,fontSize:17,fontFamily:'serif',
+  marginRight:100,marginLeft:30,fontSize:17,fontFamily:'Roboto',
   fontWeight:'bold'
 }
 });

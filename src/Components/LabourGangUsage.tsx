@@ -100,7 +100,7 @@ const LabourGangUsage=({navigation}:{navigation:any})=>{
 }
 const Styles=StyleSheet.create({
   addContainer:{
-    marginRight:100,marginLeft:30,fontSize:17,fontFamily:'serif',
+    marginRight:100,marginLeft:30,fontSize:17,fontFamily:'Roboto',
     fontWeight:'bold'
   }
 })

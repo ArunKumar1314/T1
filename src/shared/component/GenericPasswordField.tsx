@@ -55,10 +55,10 @@ export default function GenericPasswordField({
           name="lock"
           size={25}
           color="#317064"
-          style={{ position: 'absolute', left: 10}}
+          style={{ position: 'absolute', left: 10,zIndex:1}}
         />
          
-          
+         
       
         <TextInput
           placeholder={placeholder}
@@ -70,13 +70,14 @@ export default function GenericPasswordField({
           style={[
             GenericPasswordFieldStyles.buttonContainer,
             buttonContainerStyles,
-            { paddingLeft: 15, paddingRight: 40, },
+            {  paddingRight: 40},
             isFocused && GenericInputFieldStyles.borderChange,
             error && GenericPasswordFieldStyles.errorBorderChange
           ]}
           secureTextEntry={!passwordVisible}
           {...rest}
         />
+
         <TouchableOpacity
           onPress={() => setPasswordVisible(!passwordVisible)}
           style={{ position: 'absolute', right: 10 }}
